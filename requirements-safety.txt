@@ -1,0 +1,9 @@
+# SafetyPointGoal1 only (safety-gymnasium pins gymnasium 0.28.1). Python 3.8.
+numpy>=1.23,<1.24
+scikit-learn>=1.3,<1.4
+matplotlib>=3.7,<3.8
+joblib>=1.3
+tqdm>=4.66
+torch>=2.0,<2.5
+safety-gymnasium==1.0.0
+safepo @ git+https://github.com/PKU-Alignment/Safe-Policy-Optimization.git

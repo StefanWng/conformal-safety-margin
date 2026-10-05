@@ -1,0 +1,15 @@
+# CartPole, Pendulum, BeamRider, grouping analysis and figures. Python >= 3.10.
+numpy>=1.24
+scipy>=1.10
+scikit-learn>=1.7,<1.8
+matplotlib>=3.7
+joblib>=1.3
+tqdm>=4.66
+torch>=2.1
+gymnasium>=1.0
+ale-py>=0.12,<0.13
+opencv-python-headless>=4.8
+stable-baselines3>=2.6
+sb3-contrib>=2.6
+huggingface-sb3>=3.0
+huggingface-hub>=0.20

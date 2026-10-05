@@ -1,0 +1,10 @@
+runs/
+__pycache__/
+*.pyc
+*.npz
+*.pkl
+*.pt
+*.joblib
+figures/*.pdf
+figures/*.png
+figures/past/
