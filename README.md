@@ -4,8 +4,6 @@ Code for collecting the reduction datasets and reproducing the figures of *Confo
 
 ## Install
 
-SafetyPointGoal1 needs its own environment, because safety-gymnasium pins an older gymnasium.
-
 ```bash
 # CartPole, Pendulum, BeamRider, grouping, figures (Python >= 3.10)
 pip install -r requirements.txt
@@ -17,7 +15,7 @@ Run every command from the repository root. Outputs are written to `runs/`.
 
 ## SafetyPointGoal1
 
-Train the CPO policy with [SafePO](https://github.com/PKU-Alignment/Safe-Policy-Optimization), from a clone of that repository:
+Train a policy with [SafePO](https://github.com/PKU-Alignment/Safe-Policy-Optimization), from a clone of that repository (results from the paper train using CPO):
 
 ```bash
 python safepo/single_agent/cpo.py --task SafetyPointGoal1-v0 --seed 0 --total-steps 12000000 --num-envs 10 --steps-per-epoch 20000 --cost-limit 25
@@ -43,7 +41,7 @@ python pendulum/pendulum_adaptivity_direct.py --num-anchors 5000 --samples-per-s
 
 ## BeamRider
 
-This uses the pretrained `sb3/qrdqn-BeamRiderNoFrameskip-v4` agent. The second command runs the density-estimate baseline of Grushin et al. on the same data. The third command analyses the n = 8 slice of that data.
+This uses the pretrained `sb3/qrdqn-BeamRiderNoFrameskip-v4` agent and runs the density-estimate baseline of Grushin et al. on the same data. 
 
 ```bash
 python atari/atari_grushin.py --num-anchors 5000 --samples-per-state 128 --random-prob 0.02 --gamma 0.999 --max-steps 400 --episodic-life --tolerance-list 5 10 15 20 25 30 40 50 75 100 150 200 250 300 400 500 650 800 1000 --raw-npz runs/beamrider/sweep/raw.npz --save-path runs/beamrider/sweep/grushin_net.pkl --results-json runs/beamrider/sweep/results.json
