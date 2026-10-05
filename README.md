@@ -61,7 +61,8 @@ python grouping/grouped_sweep.py export cartpole pendulum beamrider
 python grouping/fixed_groups.py all spg1 cartpole pendulum beamrider
 python grouping/fixed_agree.py spg1 cartpole pendulum beamrider
 python figures/make_figures.py
-python figures/make_method_figure.py
+python figures/make_method_figure_no_icon.py   # method overview used in the paper
+python figures/make_method_figure.py           # variant with icons
 ```
 
 ## Common options
